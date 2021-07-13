@@ -19,7 +19,13 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 18;
 
+if(votingAge >= 18){
+  console.log(true);
+}else{
+  console.log(false);
+}
 
 
 /*
@@ -32,8 +38,17 @@ Do the following:
 
    HINT: no function required
 */
+let hobby = `checkers`;
 
+let value = `good`;
 
+if (value === `good`){
+  hobby = `ffxiv`;
+}else{ 
+  hobby = `checkers`;
+}
+
+console.log(`task 1b:`, hobby);
 
 
 
@@ -47,9 +62,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+const year = `1999`;
 
-
-
+console.log(`task 1c:`, Number(year));
 
 /*
 Task 1d - Multiply
@@ -61,10 +76,10 @@ Do the following:
 */
 
 function multiply(a, b){
-  
+  return a * b
 }
 
-
+console.log(multiply, 2 * 7);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -76,11 +91,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
 
-
+console.log(`2:`,dogYears(26));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -109,8 +124,22 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if(age >= 1 && weight <= 5){
+    return weight * 0.05;
+  }else if(age >= 1 && weight >= 6 && weight <= 10){
+    return weight *0.04;
+  }else if(age >= 1 && weight >= 11 && weight <= 15){
+    return weight *0.03;
+  }else if(age >= 1 && weight > 15){
+    return weight * 0.02;
+  }else if(age < 1 && age >= 0.583){
+    return weight * 0.04;
+  }else if(age < 0.583 && age >= 0.333){
+    return weight * 0.05;
+  }else if(age < 0.333){
+    return weight * 0.10;
+  }
 }
 
 
@@ -170,11 +199,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * 0.621371;
 }
 
-
+console.log(`5a:`, miles(5));
 
 //Task 5b - Feet to CM
 /*
@@ -184,11 +213,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48;
 }
 
-
+console.log(`5b`, feet(200));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -222,8 +251,18 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(num){
+if (num >= 90){
+  return `you got an A`;
+}else if(num < 90 && num >= 80){
+  return `you got a B`;
+}else if(num < 80 && num>= 70){
+  return `you got a C`;
+}else if(num< 70 && num >= 60){
+  return `you got a D`;
+}else if (num < 60){
+  return `you got an F`;
+}
 }
 
 
